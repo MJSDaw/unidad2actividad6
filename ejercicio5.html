@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cambio de variables y funciones</title>
+</head>
+<body>
+    <div id="respuesta">
+
+    </div>
+    <script>
+        let variable = 5;
+        let miFuncion = function(){
+            return "hola";
+        }
+        document.getElementById('respuesta').innerHTML = `Actualmente la variable contiene ${variable} y la función devuelve ${miFuncion()}. <br>`;
+
+        variable = 70;
+        miFuncion = function(){
+            return "adios";
+        }
+        document.getElementById('respuesta').innerHTML += `Ahora la variable contiene ${variable} y la función devuelve ${miFuncion()}. <br>`;
+    </script>
+    
+</body>
+</html>

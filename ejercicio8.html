@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fecha</title>
+</head>
+<body>
+    <div id="response"><input type="date" id="fecha" pattern="/^([0-2][0-9]|3[0-1])\/(0[1-9]|1[0-2])\/\d{4}$/"> <button onclick="funcion()">aceptar</button></div>
+    <script>
+        function funcion(){
+            let caja = document.getElementById('response');
+            let fecha = document.getElementById('fecha').value;
+            if(fecha){
+                fecha = new Date(fecha);
+                caja.innerHTML = (fecha.getMonth()+1) + ' - ' + fecha.getFullYear();
+            } else {
+                alert('Debes poner una fecha.')
+            }
+        }
+    </script>
+</body>
+</html>

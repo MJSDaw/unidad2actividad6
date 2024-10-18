@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="respuesta"></div>
+    <script>
+        let milista = ['panadero', 456, [0, 1, 2]];
+        alert(milista);
+        alert(milista[2][2]);
+        let caja = document.getElementById('respuesta');
+        let salida = 'El contenido del array es: <br>' + JSON.stringify(milista);
+        caja.innerHTML = salida;
+    </script>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos</title>
+</head>
+<body>
+    <div id="caja" onmouseover="onMouseOver()" onmouseout="onMouseOut()"></div>
+    <div id="respuesta"></div>
+    <input type="text" onblur="onBlur()">
+    <script>
+        function onMouseOver(){
+            respuesta = document.getElementById('respuesta');
+            respuesta.innerHTML = "Has entrado al cuadrado."
+        }
+        function onMouseOut(){
+            respuesta = document.getElementById('respuesta');
+            respuesta.innerHTML = "Has salido del cuadrado."
+        }
+        function onBlur(){
+            respuesta = document.getElementById('respuesta');
+            respuesta.innerHTML = "Has perdido el foco del campo de texto."
+        }
+    </script>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        #caja {
+            background-color: darkslategray;
+            width: 500px;
+            height: 500px;
+        }
+    </style>
+</body>
+</html>

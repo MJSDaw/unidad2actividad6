@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calcular área</title>
+</head>
+<body>
+    <h2>Área de una circunferencia de radio 5:</h2> <br>
+    <div id="respuesta"></div>
+    <script>
+        // Definicion de variable contenedora del div donde se mostrará el resultado
+        let respuesta = document.getElementById('respuesta');
+
+        // Calculo del área de una circunferencia de radio 5 y almacenamiento en variable areaCircunferencia5
+        let areaCircunferencia5 = Math.pow(5, 2) * Math.PI;
+
+        // Impresión del resultado en el div identidicado como 'respuesta'
+        respuesta.innerHTML = `<p>El área de una circunferencia de radio 5 es: ${areaCircunferencia5}</p>`
+    </script>
+</body>
+</html>

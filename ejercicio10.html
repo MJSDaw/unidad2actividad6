@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rombo</title>
+</head>
+<body>
+    <div id="inputs">
+        <label for="rows">Numero de columnas: </label><input type="number" id="rows" value="3" onchange="imprimirRomboVacio()"> <br> <br>
+    </div>
+    <div id="print"></div>
+    <script>
+        function imprimirRomboVacio() {
+            const n = parseInt(document.getElementById("rows").value); // Convertimos el valor a número entero
+            let rombo = "";
+
+            // Parte superior del rombo vacío
+            for (let i = 1; i <= n; i++) {
+                // Espacios en blanco antes del primer asterisco
+                for (let j = 1; j <= n - i; j++) {
+                    rombo += "&nbsp";
+                }
+                // Asteriscos de los bordes
+                if (i === 1) {
+                    // Solo un asterisco en la primera fila
+                    rombo += "*";
+                } else {
+                    // Asterisco en los bordes de cada fila
+                    rombo += "*";
+                    for (let k = 1; k <= (2 * i - 3); k++) {
+                        rombo += "&nbsp"; // Espacios en el medio
+                    }
+                    rombo += "*";
+                }
+                rombo += "<br>"; // Nueva línea
+            }
+
+            // Parte inferior del rombo vacío
+            for (let i = n - 1; i >= 1; i--) {
+                // Espacios en blanco antes del primer asterisco
+                for (let j = 1; j <= n - i; j++) {
+                    rombo += "&nbsp";
+                }
+                // Asteriscos de los bordes
+                if (i === 1) {
+                    // Solo un asterisco en la última fila
+                    rombo += "*";
+                } else {
+                    // Asterisco en los bordes de cada fila
+                    rombo += "*";
+                    for (let k = 1; k <= (2 * i - 3); k++) {
+                        rombo += "&nbsp"; // Espacios en el medio
+                    }
+                    rombo += "*";
+                }
+                rombo += "<br>"; // Nueva línea
+            }
+
+            // Mostrar el rombo vacío
+            document.getElementById("print").innerHTML = rombo;
+        }
+    </script>
+</body>
+</html>
